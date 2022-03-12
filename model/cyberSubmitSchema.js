@@ -40,10 +40,10 @@ const cyberSubmitSchema = new mongoose.Schema({
         type : String,
         required : true,
     }, 
-    // gov_id_img : {
-    //     data : Buffer,
-    //     contentType : String,
-    // }
+    gov_id_img : {
+        data : Buffer,
+        contentType : String,
+    }
 })
 
 const cyberbilling_submit = mongoose.model('cyberSubmit', cyberSubmitSchema);
