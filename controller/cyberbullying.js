@@ -6,7 +6,7 @@ const cyberBullying = async (req, res) => {
         if (!lname || !fname || !mobile || !wts_no || !email || !address || !type_of_service || !query) {
             return res.status(400).send("Please fill the data")
         } else {
-            const userField = new User({ Body : lname, fname, mobile, wts_no, email, address, type_of_service, query });
+            const userField = new User({lname, fname, mobile, wts_no, email, address, type_of_service, query} );
             const userRegister = await userField.save();
 
             if (userRegister) {
